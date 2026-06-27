@@ -219,3 +219,4 @@ __marimo__/
 
 #ignore Database
 rm_vectordb/
+frontend/node_modules/

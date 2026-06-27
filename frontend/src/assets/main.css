@@ -1,0 +1,243 @@
+.oracle-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0d0f12;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #15181e;
+  border-bottom: 2px solid #242936;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #00ff87;
+  letter-spacing: 1px;
+}
+
+.portal-effect {
+  font-size: 1.6rem;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.connection-status {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background-color: #ef444433;
+  color: #ef4444;
+}
+.connection-status.connected {
+  background-color: #10b98133;
+  color: #10b981;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #11141a;
+  border-right: 1px solid #1e2330;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.form-group select, .form-group input {
+  background-color: #1a1d24;
+  border: 1px solid #334155;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: #00ff87;
+}
+
+.notes {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Chat area */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b0c0f;
+}
+
+.message-history {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.welcome-screen {
+  text-align: center;
+  margin: auto;
+  max-width: 450px;
+}
+
+.oracle-avatar {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-screen p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 1rem;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  background-color: #242936;
+  border-bottom-right-radius: 2px;
+}
+
+.message-bubble.oracle {
+  align-self: flex-start;
+  background-color: #161b22;
+  border: 1px solid #23352c;
+  border-bottom-left-radius: 2px;
+}
+
+.message-meta {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+.message-content p {
+  margin: 0;
+}
+
+/* Sources Layout */
+.sources-panel {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #1e293b;
+}
+
+.sources-title {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.source-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.source-tag {
+  font-size: 0.75rem;
+  font-family: 'Space Mono', monospace;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  background-color: #33415555;
+  color: #cbd5e1;
+}
+
+.source-tag.character { background-color: #1e3a8a33; color: #60a5fa; border: 1px solid #1e3a8a; }
+.source-tag.episode { background-color: #14532d33; color: #4ade80; border: 1px solid #14532d; }
+.source-tag.location { background-color: #701a7533; color: #f472b6; border: 1px solid #701a75; }
+
+/* Inputs Form */
+.chat-input-form {
+  padding: 1.5rem 2rem;
+  background-color: #11141a;
+  border-top: 2px solid #1e2330;
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-input-form input {
+  flex: 1;
+  background-color: #181c24;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-family: inherit;
+}
+
+.chat-input-form input:focus {
+  outline: none;
+  border-color: #00ff87;
+}
+
+.chat-input-form button {
+  background-color: #00ff87;
+  color: #0d0f12;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.chat-input-form button:hover {
+  opacity: 0.9;
+}
+
+.chat-input-form button:disabled {
+  background-color: #334155;
+  color: #64748b;
+  cursor: not-allowed;
+}
