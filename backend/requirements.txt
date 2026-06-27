@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+chromadb
+openai
+google-genai
+httpx
+requests
+sentence-transformers
