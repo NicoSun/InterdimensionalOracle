@@ -1,25 +1,24 @@
 # 🌀 InterdimensionalOracle
-A Rick&amp;Morty Oracle answering questions about the show using knowledge from rickandmortyapi
+A Rick&amp;Morty Oracle answering questions about the show using knowledge from rickandmortyapi (https://rickandmortyapi.com/api/)
 
 ---
 
 ## 📖 Table of Contents (H2)
-* [About the Project](#about-the-project)
 * [Features](#features)
 * [Tech Stack](#tech-stack)
 * [Getting Started](#getting-started)
 * [Usage](#usage)
 * [License](#license)
 
-## 🧐 About the Project
-- create a local cache of https://rickandmortyapi.com/api/
-- use it to experiment with different database designs
-
 
 ## ✨ Features
+creates a local cache of api knowledge which can be used to experiment with different database designs
+
 supports local LLM (ollama), OpenAI & Gemini for response generation
 
 > Note: OpenAI wasn't tested because I don't have API credits
+
+
 
 ## 🛠 Tech Stack
 | Technology | Purpose |
@@ -47,6 +46,7 @@ it also downloads data from the API to create a vector database
 terminal1
 ```bash
   cd backend
+  source venv/bin/activate
   python app.py
   ```
 
