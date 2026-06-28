@@ -12,7 +12,7 @@ A Rick&amp;Morty Oracle answering questions about the show using knowledge from 
 
 
 ## ✨ Features
-creates a local cache of api knowledge which can be used to experiment with different database designs
+creates a local cache of the api knowledge which can be used to experiment with different database designs
 
 supports local LLM (ollama), OpenAI & Gemini for response generation
 
@@ -28,6 +28,12 @@ supports local LLM (ollama), OpenAI & Gemini for response generation
 | FastAPI | Websocket | 
 | ChromaDB | Database | 
 | SentenceTransformer | Embeddings |
+
+### Tech stack justifications
+Websocket allows token streaming which great for slow LLM responses. A simple API would wait until the whole message is generated.
+ChromaDB & SentenceTransformer are simple local vector databse and RAG retrieval technologies.
+They can easily be exchanged. With more time I would prioretise optimizing the database generation and retrieval.
+
 
 ## 💻 Install Guide
 
