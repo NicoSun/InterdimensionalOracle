@@ -66,7 +66,7 @@ def search_rag(
     for doc, meta, distance in zip(results['documents'][0], results['metadatas'][0], results['distances'][0]):
         if distance <= max_distance:
             filtered_documents.append(doc)
-            
+
             # Add metadata attributes
             meta_copy = dict(meta)
             meta_copy["distance"] = distance

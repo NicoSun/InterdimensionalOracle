@@ -85,6 +85,9 @@
                   :class="source.type"
                 >
                   [{{ source.type }}] {{ source.name }}
+                  <span class="confidence-text">
+                    ({{ distanceConfidence(source.distance).label }})
+                  </span>
                 </span>
               </div>
             </div>
@@ -99,8 +102,11 @@
             <div v-if="activeSources.length > 0" class="sources-panel">
               <span class="sources-title">Verified Dimensions/Entities:</span>
               <div class="source-tags">
-                <span v-for="(source, sIdx) in activeSources" :key="sIdx" class="source-tag" :class="source.type">
+                <span v-for="(source, sIdx) in activeSources" :key="sIdx" class="source-tag" :class="[source.type, getConfidence(source.distance).class]">
                   [{{ source.type }}] {{ source.name }}
+                  <span class="confidence-text">
+                    ({{ distanceConfidence(source.distance).label }})
+                  </span>
                 </span>
               </div>
             </div>
@@ -125,7 +131,7 @@
 </template>
 
 <script setup>
-import { useOracleChat } from './composables/useOracleChat';
+import { useOracleChat, distanceConfidence } from './composables/useOracleChat';
 
 const { 
   messages, 

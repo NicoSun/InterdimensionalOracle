@@ -140,7 +140,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 continue
 
             # 3. Emit sources back to frontend before streaming LLM response
-            sources = [{"type": m.get("type"), "name": m.get("name"), "id": m.get("id")} for m in metadatas]
+            sources = [{"type": m.get("type_or_species"), "name": m.get("name"), "id": m.get("id"),"distance":m.get("distance")} for m in metadatas]
             await websocket.send_json({"type": "sources", "sources": sources})
 
             # 4. Construct Prompt

@@ -1,5 +1,16 @@
 import { ref, reactive, computed, nextTick, onMounted, onUnmounted } from 'vue';
 
+
+export function distanceConfidence (distance) {
+  if (distance <= 0.333) {
+    return { label: 'Sure', class: 'confidence-high' };
+  } else if (distance <= 0.666) {
+    return { label: 'Maybe', class: 'confidence-medium' };
+  } else {
+    return { label: 'UnSure', class: 'confidence-low' };
+  }
+};
+
 export function useOracleChat() {
   const messages = ref([]);
   const inputQuery = ref('');
